@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "54368817104",
+    "project_id": "citric-proxy-379202",
+    "storage_bucket": "citric-proxy-379202.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54368817104:android:15c20a576b9995fe1273d5",
+        "android_client_info": {
+          "package_name": "com.example.loyality_craft"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "54368817104-7gscjiiukm2hgovjrupuml2t820hp3ii.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbeal2OJIkoPUJG1FV3HReyU5RSJEnOiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "54368817104-7gscjiiukm2hgovjrupuml2t820hp3ii.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
