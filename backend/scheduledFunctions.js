@@ -5,7 +5,7 @@ const { update } = require("./revise");
 
 exports.initScheduledJobs = (getFitnessData) => {
   const fetchData = CronJob.schedule(
-    "*/1 * * * *",
+    "0 * * * *",
     async () => {
       console.log("I'm executed on a schedule!");
       const users = await getAllUsers();
