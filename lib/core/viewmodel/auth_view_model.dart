@@ -13,13 +13,12 @@ class AuthViewModel extends BaseViewModel {
   final _router = locator<AppRouter>();
   WebViewController controller = WebViewController();
 
-  final authUri = Uri.parse(
-      'https://loyalit.onrender.com/auth/google');
+  final authUri = Uri.parse('https://loyalit.onrender.com/auth/google');
 
   void init() {
     controller = WebViewController()
       ..setUserAgent(
-          FkUserAgent.userAgent)
+          'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Mobile Safari/537.36')
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setNavigationDelegate(
         NavigationDelegate(onNavigationRequest: checkWebViewPage),

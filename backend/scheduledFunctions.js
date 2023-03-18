@@ -90,9 +90,6 @@ exports.initScheduledJobs = (getFitnessData) => {
         console.log(user.email, steps);
       });
     },
-    {
-      runOnInit: true,
-    }
   );
 
   fetchData.start();
