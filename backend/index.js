@@ -15,7 +15,7 @@ const { addNft, update } = require("./revise");
 scheduledFunctions.initScheduledJobs(getFitnessData);
 
 const app = express();
-const PORT = 5050;
+const PORT = process.env.PORT || 5050;
 
 const CLIENT_ID =
   "54368817104-7a1123u3gcre2vmkvmihhv0kvao69u7k.apps.googleusercontent.com";
@@ -102,7 +102,7 @@ app.post("/createNFT", async (req, res) => {
       return;
     }
     const totalUserCount = await getTotalUserLength();
-    console.log(totalUserCount)
+    console.log(totalUserCount);
     const nft = await addNft({
       tokenId: totalUserCount,
       discount: 0,
