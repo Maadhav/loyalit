@@ -52,3 +52,4 @@ app.*.map.json
 /api/.env
 /api/.env.local
 /api/package-lock.json
+pubspec.lock
