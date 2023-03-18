@@ -21,7 +21,7 @@ const CLIENT_ID =
   "54368817104-7a1123u3gcre2vmkvmihhv0kvao69u7k.apps.googleusercontent.com";
 const CLIENT_SECRET = "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";
 const REDIRECT_URI =
-  "https://8265-2405-201-2007-2009-550c-3b09-3890-a026.in.ngrok.io/auth/google/callback";
+  "https://loyalit.onrender.com/auth/google/callback";
 
 const client = new OAuth2Client(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
 

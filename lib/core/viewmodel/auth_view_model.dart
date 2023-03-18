@@ -14,7 +14,7 @@ class AuthViewModel extends BaseViewModel {
   WebViewController controller = WebViewController();
 
   final authUri = Uri.parse(
-      'https://8265-2405-201-2007-2009-550c-3b09-3890-a026.in.ngrok.io/auth/google');
+      'https://loyalit.onrender.com/auth/google');
 
   void init() {
     controller = WebViewController()
@@ -24,8 +24,7 @@ class AuthViewModel extends BaseViewModel {
       ..setNavigationDelegate(
         NavigationDelegate(onNavigationRequest: checkWebViewPage),
       )
-      ..loadRequest(Uri.parse(
-          'https://8265-2405-201-2007-2009-550c-3b09-3890-a026.in.ngrok.io/auth/google'));
+      ..loadRequest(authUri);
   }
 
   Future<NavigationDecision> checkWebViewPage(NavigationRequest request) async {
