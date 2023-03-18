@@ -29,18 +29,18 @@ import 'app_locator.dart';
 )
 class $AppRouter {}
 
-// class AuthGuard extends AutoRouteGuard {
-//   @override
-//   void onNavigation(NavigationResolver resolver, StackRouter router) async {
-//     if (await locator<AuthService>().checkAuthStatus()) {
-//       log("AuthGuard: Authenticated");
-//       resolver.next(true);
-//     } else {
-//       log("AuthGuard: Not Authenticated");
-//       await router.push(const SignInRoute());
-//       if (await locator<AuthService>().checkAuthStatus()) {
-//         resolver.next(true);
-//       }
-//     }
-//   }
-// }
+class AuthGuard extends AutoRouteGuard {
+  @override
+  void onNavigation(NavigationResolver resolver, StackRouter router) async {
+    if (await locator<AuthService>().checkAuthStatus()) {
+      log("AuthGuard: Authenticated");
+      resolver.next(true);
+    } else {
+      log("AuthGuard: Not Authenticated");
+      await router.push(const SignInRoute());
+      if (await locator<AuthService>().checkAuthStatus()) {
+        resolver.next(true);
+      }
+    }
+  }
+}
