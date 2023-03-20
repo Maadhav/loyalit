@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:loyality_craft/core/viewmodel/auth_view_model.dart';
-import 'package:loyality_craft/core/viewmodel/home_view_model.dart';
+import 'package:loyalit/core/viewmodel/auth_view_model.dart';
+import 'package:loyalit/core/viewmodel/home_view_model.dart';
 import 'package:provider/provider.dart';
 
 ///[AppProvider] returns a [MultiProvider] widget that can be used to

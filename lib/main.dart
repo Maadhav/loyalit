@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:fk_user_agent/fk_user_agent.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:loyality_craft/core/app_locator.dart';
+import 'package:loyalit/core/app_locator.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 import 'core/app_provider.dart';

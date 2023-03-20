@@ -1,4 +1,4 @@
-package com.example.loyality_craft
+package com.example.loyalit
 
 import io.flutter.embedding.android.FlutterActivity
 

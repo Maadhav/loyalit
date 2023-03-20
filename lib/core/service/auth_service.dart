@@ -1,5 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:loyality_craft/core/app_locator.dart';
+import 'package:loyalit/core/app_locator.dart';
 
 import '../app_router.gr.dart';
 

@@ -1,3 +1,3 @@
-# loyality_craft
+# loyalit
 
 A new Flutter project.

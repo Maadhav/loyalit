@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:loyality_craft/core/viewmodel/home_view_model.dart';
+import 'package:loyalit/core/viewmodel/home_view_model.dart';
 import 'package:provider/provider.dart';
 
 class HomeView extends StatefulWidget {

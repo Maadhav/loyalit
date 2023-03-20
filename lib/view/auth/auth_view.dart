@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:loyality_craft/core/viewmodel/auth_view_model.dart';
+import 'package:loyalit/core/viewmodel/auth_view_model.dart';
 import 'package:provider/provider.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 

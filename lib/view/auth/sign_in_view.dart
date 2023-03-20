@@ -3,7 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:loyality_craft/core/app_theme.dart';
+import 'package:loyalit/core/app_theme.dart';
 import 'package:provider/provider.dart';
 
 import '../../core/viewmodel/auth_view_model.dart';

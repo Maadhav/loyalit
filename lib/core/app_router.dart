@@ -1,10 +1,10 @@
 import 'dart:developer';
 import 'package:auto_route/auto_route.dart';
-import 'package:loyality_craft/core/app_router.gr.dart';
-import 'package:loyality_craft/core/service/auth_service.dart';
-import 'package:loyality_craft/view/auth/auth_view.dart';
-import 'package:loyality_craft/view/auth/sign_in_view.dart';
-import 'package:loyality_craft/view/home/home_view.dart';
+import 'package:loyalit/core/app_router.gr.dart';
+import 'package:loyalit/core/service/auth_service.dart';
+import 'package:loyalit/view/auth/auth_view.dart';
+import 'package:loyalit/view/auth/sign_in_view.dart';
+import 'package:loyalit/view/home/home_view.dart';
 
 import 'app_locator.dart';
 
