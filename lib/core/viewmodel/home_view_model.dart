@@ -11,8 +11,17 @@ class HomeViewModel extends BaseViewModel {
 
   String get email => _email;
 
+  int _index = 0;
+
+  int get index => _index;
+
   init() {
     _email = locator.get<AuthService>().getUser().email ?? '';
+  }
+
+  void changeIndex(int index) {
+    _index = index;
+    notifyListeners();
   }
 
   void signOut() {
