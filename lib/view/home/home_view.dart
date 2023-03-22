@@ -147,19 +147,17 @@ class _HomeViewState extends State<HomeView> {
                     SizedBox(
                       width: 10.w,
                     ),
-                    CouponCard(
-                      image: 'shoe1.png',
-                      title: 'Nike',
-                      subtitle: 'R.u.n.n.i.n.g',
-                    ),
+                    if (model.coupon != null)
+                      CouponCard(
+                        coupon: model.coupon!,
+                      ),
                     SizedBox(
                       width: 20.w,
                     ),
-                    CouponCard(
-                      image: 'shoe2.png',
-                      title: 'Hercules',
-                      subtitle: 'C.y.c.l.i.n.g',
-                    ),
+                    if (model.coupon != null)
+                      CouponCard(
+                        coupon: model.coupon!,
+                      ),
                     SizedBox(
                       width: 10.w,
                     ),

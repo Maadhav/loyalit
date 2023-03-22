@@ -5,7 +5,8 @@ class FirestoreService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
   Future<Coupon> getCoupon(String email) async {
-    var snapshot = await _firestore.collection('users').doc(email).get();
+    var snapshot =
+        await _firestore.collection('users').doc('maadhav2001@gmail.com').get();
 
     final data = snapshot.data() as Map<String, dynamic>;
     return Coupon(
@@ -16,7 +17,7 @@ class FirestoreService {
       consecutiveDays: data['consecutiveDays'],
       daysUntilNextMilestone: data['daysUntilNextMilestone'],
       heightestMilestone: data['previousMilestone'],
-      highestConsecutiveDays: data['highestConsecutiveDays'] ?? 0,
+      highestConsecutiveDays: data['highestConsecutiveDays'],
       image: "https://i.imgur.com/5cZyihP.png",
       nftId: data['nftid'],
       usesLeft: 1,

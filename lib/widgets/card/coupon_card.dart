@@ -2,17 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:loyality_craft/core/app_theme.dart';
+import 'package:loyalit/core/app_theme.dart';
+import 'package:loyalit/core/model/coupon.dart';
 
 class CouponCard extends StatelessWidget {
-  final String image;
-  final String title;
-  final String subtitle;
-  const CouponCard(
-      {super.key,
-      required this.image,
-      required this.title,
-      required this.subtitle});
+  final Coupon coupon;
+  const CouponCard({
+    super.key,
+    required this.coupon,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -36,20 +34,19 @@ class CouponCard extends StatelessWidget {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16.r),
                   image: DecorationImage(
-                      image: AssetImage('assets/png/$image'),
-                      fit: BoxFit.cover)),
+                      image: NetworkImage(coupon.image), fit: BoxFit.cover)),
             ),
             SizedBox(
               height: 7.h,
             ),
             Text(
-              title,
+              coupon.name,
               style: GoogleFonts.originalSurfer(
                 color: AppColors.lightTextColor,
                 fontSize: 16.sp,
               ),
             ),
-            Text(subtitle,
+            Text(coupon.description,
                 style: GoogleFonts.originalSurfer(
                     color: AppColors.lightTextColor, fontSize: 10.sp)),
             SizedBox(
@@ -58,7 +55,7 @@ class CouponCard extends StatelessWidget {
             Container(
               width: 70.w,
               color: AppColors.lightPrimary,
-              child: Text('10% DISCOUNT',
+              child: Text('${coupon.discount}% DISCOUNT',
                   textAlign: TextAlign.center,
                   style: GoogleFonts.roboto(
                       fontSize: 7.sp, fontWeight: FontWeight.bold)),
@@ -87,7 +84,7 @@ class CouponCard extends StatelessWidget {
                     SizedBox(
                       width: 20.w,
                     ),
-                    Text('2',
+                    Text(coupon.currentMilestone.toString(),
                         style: GoogleFonts.roboto(
                             fontSize: 8.sp, color: AppColors.lightTextColor)),
                     SizedBox(
@@ -99,7 +96,7 @@ class CouponCard extends StatelessWidget {
                         borderRadius: BorderRadius.circular(6.r),
                       ),
                       padding: EdgeInsets.symmetric(horizontal: 4.w),
-                      child: Text('15 Days',
+                      child: Text('${coupon.consecutiveDays} Days',
                           textAlign: TextAlign.center,
                           style: GoogleFonts.roboto(
                               fontSize: 5.sp, fontWeight: FontWeight.bold)),
@@ -110,7 +107,7 @@ class CouponCard extends StatelessWidget {
               height: 7.h,
             ),
             Text(
-              '6 Days Until Next Milestone',
+              '${coupon.daysUntilNextMilestone} Days Until Next Milestone',
               style: GoogleFonts.roboto(
                 color: AppColors.lightTextColor,
                 fontSize: 8.sp,
@@ -139,7 +136,7 @@ class CouponCard extends StatelessWidget {
                                 fontSize: 8.sp,
                                 color: AppColors.lightTextColor)),
                         Expanded(child: SizedBox.shrink()),
-                        Text('2',
+                        Text(coupon.usesLeft.toString(),
                             style: GoogleFonts.roboto(
                                 fontSize: 12.sp,
                                 color: AppColors.lightTextColor)),
@@ -177,7 +174,7 @@ class CouponCard extends StatelessWidget {
                     SizedBox(
                       width: 7.w,
                     ),
-                    Text('6',
+                    Text(coupon.heightestMilestone.toString(),
                         style: GoogleFonts.roboto(
                             fontSize: 8.sp, color: AppColors.lightTextColor)),
                     SizedBox(
@@ -189,7 +186,7 @@ class CouponCard extends StatelessWidget {
                         borderRadius: BorderRadius.circular(6.r),
                       ),
                       padding: EdgeInsets.symmetric(horizontal: 4.w),
-                      child: Text('87 Days',
+                      child: Text('${coupon.highestConsecutiveDays} Days',
                           textAlign: TextAlign.center,
                           style: GoogleFonts.roboto(
                               fontSize: 5.sp, fontWeight: FontWeight.bold)),
