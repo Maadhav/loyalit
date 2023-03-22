@@ -33,8 +33,7 @@ class SignInView extends StatelessWidget {
                   ),
                   Text(
                     'Loyal IT !!',
-                    style: TextStyle(
-                        fontFamily: 'MuseoModerno',
+                    style: GoogleFonts.museoModerno(
                         fontSize: 36.sp,
                         color: AppColors.primary,
                         fontWeight: FontWeight.bold),
@@ -44,7 +43,8 @@ class SignInView extends StatelessWidget {
                   ),
                   Text(
                     'Lorem Ipsum in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupida sunt in culpa qui officia deserunt mollit anim id est laborum.',
-                    style: TextStyle(fontSize: 20.sp, color: AppColors.primary),
+                    style: GoogleFonts.poppins(
+                        fontSize: 20.sp, color: AppColors.primary),
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(
@@ -69,7 +69,7 @@ class SignInView extends StatelessWidget {
                             ),
                             Text(
                               'Sign in with Google',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                   fontSize: 20.sp, color: AppColors.primary),
                             )
                           ],

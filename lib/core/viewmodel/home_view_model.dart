@@ -14,6 +14,9 @@ class HomeViewModel extends BaseViewModel {
 
   Coupon? _coupon;
   Coupon? get coupon => _coupon;
+  int _index = 0;
+
+  int get index => _index;
 
   init() {
     _email = locator.get<AuthService>().getUser().email ?? '';
@@ -22,6 +25,11 @@ class HomeViewModel extends BaseViewModel {
 
   Future<void> getCoupon() async {
     _coupon = await locator<FirestoreService>().getCoupon(email);
+    notifyListeners();
+  }
+
+  void changeIndex(int index) {
+    _index = index;
     notifyListeners();
   }
 
