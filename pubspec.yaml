@@ -1,14 +1,15 @@
 name: loyalit
 description: A new Flutter project.
-publish_to: "none"
+publish_to: 'none'
 version: 0.1.0
 
 environment:
-  sdk: ">=2.19.0 <3.0.0"
+  sdk: '>=2.19.0 <3.0.0'
 
 dependencies:
   auto_route: ^5.0.4
   cloud_firestore: ^4.4.5
+  carousel_slider: ^4.2.1
   firebase_auth: ^4.2.9
   firebase_core: ^2.7.0
   fk_user_agent: ^2.1.0
