@@ -78,8 +78,8 @@ exports.initScheduledJobs = (getFitnessData) => {
         )
       ) {
         updateUserMilestone(user.email, {
-          consecutiveDays: "0",
-          milestone: "0",
+          consecutiveDays: 0,
+          milestone: 0,
           daysUntilNextMilestone: 7,
         });
         update({
