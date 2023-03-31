@@ -1,6 +1,5 @@
 import 'dart:developer';
 
-import 'package:fk_user_agent/fk_user_agent.dart';
 import 'package:loyalit/core/app_router.gr.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 

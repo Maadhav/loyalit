@@ -1,11 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:loyalit/core/app_locator.dart';
-
-import '../app_router.gr.dart';
 
 class AuthService {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
-  static final _router = locator<AppRouter>();
 
   Future<bool> checkAuthStatus() async {
     try {

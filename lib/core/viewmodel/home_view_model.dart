@@ -37,4 +37,8 @@ class HomeViewModel extends BaseViewModel {
     locator.get<AuthService>().signOut();
     _router.replace(const SignInRoute());
   }
+
+  void navigateToNFT() {
+    _router.push(NFTDetailRoute(coupon: _coupon!));
+  }
 }

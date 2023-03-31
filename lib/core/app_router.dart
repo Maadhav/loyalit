@@ -5,6 +5,7 @@ import 'package:loyalit/core/service/auth_service.dart';
 import 'package:loyalit/view/auth/auth_view.dart';
 import 'package:loyalit/view/auth/sign_in_view.dart';
 import 'package:loyalit/view/home/home_view.dart';
+import 'package:loyalit/view/nft_detail/nft_detail_view.dart';
 
 import 'app_locator.dart';
 
@@ -24,6 +25,10 @@ import 'app_locator.dart';
     AutoRoute(
       path: 'auth',
       page: AuthView,
+    ),
+    AutoRoute(
+      path: '/nft',
+      page: NFTDetailView,
     ),
   ],
 )

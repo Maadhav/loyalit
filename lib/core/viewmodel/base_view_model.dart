@@ -9,6 +9,5 @@ class BaseViewModel extends ChangeNotifier {
 
   void setStatus(ViewStatus value) {
     _status = value;
-    notifyListeners();
   }
 }

@@ -12,4 +12,7 @@ class AppColors {
 
   /// #E8FB0C
   static const Color lightPrimary = Color(0xFFE8FB0C);
+
+  /// #EEA033
+  static const Color lightAccent = Color(0xFFEEA033);
 }
