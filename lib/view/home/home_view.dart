@@ -45,7 +45,7 @@ class _HomeViewState extends State<HomeView> {
                           padding: EdgeInsets.symmetric(
                               horizontal: 10.w, vertical: 7.h),
                           decoration: BoxDecoration(
-                            boxShadow: [
+                            boxShadow:const [
                               BoxShadow(
                                 color: AppColors.primary,
                                 blurRadius: 2,
@@ -150,6 +150,7 @@ class _HomeViewState extends State<HomeView> {
                     if (model.coupon != null)
                       CouponCard(
                         coupon: model.coupon!,
+                        onTap: model.navigateToNFT,
                       ),
                     SizedBox(
                       width: 20.w,
@@ -157,6 +158,7 @@ class _HomeViewState extends State<HomeView> {
                     if (model.coupon != null)
                       CouponCard(
                         coupon: model.coupon!,
+                        onTap: model.navigateToNFT,
                       ),
                     SizedBox(
                       width: 10.w,

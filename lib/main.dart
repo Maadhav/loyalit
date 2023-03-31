@@ -8,7 +8,6 @@ import 'package:firebase_core/firebase_core.dart';
 
 import 'core/app_provider.dart';
 import 'core/app_router.gr.dart';
-import 'core/app_theme.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
