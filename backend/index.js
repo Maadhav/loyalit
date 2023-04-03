@@ -9,8 +9,10 @@ const {
   getUserRefreshToken,
   getTotalUserLength,
   storeNFTId,
+  changeOwner,
 } = require("./firestore");
 const { addNft, update } = require("./revise");
+const { mintNFT, transferNFT } = require("./web3");
 
 scheduledFunctions.initScheduledJobs(getFitnessData);
 
@@ -20,8 +22,7 @@ const PORT = process.env.PORT || 5050;
 const CLIENT_ID =
   "54368817104-7a1123u3gcre2vmkvmihhv0kvao69u7k.apps.googleusercontent.com";
 const CLIENT_SECRET = "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";
-const REDIRECT_URI =
-  "https://loyalit.onrender.com/auth/google/callback";
+const REDIRECT_URI = "https://loyalit.onrender.com/auth/google/callback";
 
 const client = new OAuth2Client(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
 
@@ -111,11 +112,22 @@ app.post("/createNFT", async (req, res) => {
     });
 
     storeNFTId(email, nft);
+    mintNFT(email, nft);
     res.send(`User ${email} has created NFT with id ${nft}`);
   } catch (error) {
     console.error(error);
     res.status(500).send("Error creating NFT");
   }
+});
+
+// transfer NFT
+app.post("/transferNFT", async (req, res) => {
+  const { from, to, nftId } = req.query;
+
+  await transferNFT(nftId, to);
+  await changeOwner(from, to, nftId);
+
+  res.send(`User ${from} has transferred NFT with id ${nftId} to ${to}`);
 });
 
 // a Funcction which retrieves the user's fitness data

@@ -29,6 +29,25 @@ exports.storeUser = (email, tokens) => {
     });
 };
 
+exports.changeOwner = async (from, to, nftid) => {
+  const userRef = db.collection("users").doc(from);
+  const userData = (await userRef.get()).data();
+  const userRef2 = db.collection("users").doc(to);
+  await userRef2.set(
+    {
+      nftid: nftid,
+      consecutiveDays: userData.consecutiveDays,
+      daysUntilNextMilestone: userData.daysUntilNextMilestone,
+      highestConsecutiveDays: userData.highestConsecutiveDays,
+      milestone: userData.milestone,
+      previousMilestone: userData.previousMilestone,
+      updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+    },
+    { merge: true }
+  );
+  await userRef.delete();
+};
+
 exports.storeNFTId = (email, nftid) => {
   const userRef = db.collection("users").doc(email);
   userRef
