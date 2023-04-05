@@ -62,7 +62,7 @@ class CouponCard extends StatelessWidget {
                 child: Text('${coupon.discount}% DISCOUNT',
                     textAlign: TextAlign.center,
                     style: GoogleFonts.roboto(
-                        fontSize: 7, fontWeight: FontWeight.bold)),
+                        fontSize: 10, fontWeight: FontWeight.bold)),
               ),
               SizedBox(
                 height: 15.h,
@@ -90,7 +90,7 @@ class CouponCard extends StatelessWidget {
                       ),
                       Text(coupon.currentMilestone.toString(),
                           style: GoogleFonts.roboto(
-                              fontSize: 8, color: AppColors.lightTextColor)),
+                              fontSize: 10, color: AppColors.lightTextColor)),
                       SizedBox(
                         width: 4.w,
                       ),
@@ -103,7 +103,7 @@ class CouponCard extends StatelessWidget {
                         child: Text('${coupon.consecutiveDays} Days',
                             textAlign: TextAlign.center,
                             style: GoogleFonts.roboto(
-                                fontSize: 5, fontWeight: FontWeight.bold)),
+                                fontSize: 8, fontWeight: FontWeight.bold)),
                       ),
                     ],
                   )),
@@ -114,7 +114,7 @@ class CouponCard extends StatelessWidget {
                 '${coupon.daysUntilNextMilestone} Days Until Next Milestone',
                 style: GoogleFonts.roboto(
                   color: AppColors.lightTextColor,
-                  fontSize: 8,
+                  fontSize: 10,
                   fontWeight: FontWeight.w500,
                   fontStyle: FontStyle.italic,
                 ),
@@ -123,36 +123,36 @@ class CouponCard extends StatelessWidget {
               SizedBox(
                 height: 7.h,
               ),
-              SizedBox(
-                width: 54.w,
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    SvgPicture.asset('assets/svg/uses.svg'),
-                    Positioned.fill(
-                      child: Row(
-                        children: [
-                          SizedBox(
-                            width: 10.w,
-                          ),
-                          Text('Uses',
-                              style: GoogleFonts.roboto(
-                                  fontSize: 8,
-                                  color: AppColors.lightTextColor)),
-                          const Expanded(child: SizedBox.shrink()),
-                          Text(coupon.usesLeft.toString(),
-                              style: GoogleFonts.roboto(
-                                  fontSize: 12,
-                                  color: AppColors.lightTextColor)),
-                          SizedBox(
-                            width: 10.w,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              // SizedBox(
+              //   width: 54.w,
+              //   child: Stack(
+              //     alignment: Alignment.center,
+              //     children: [
+              //       SvgPicture.asset('assets/svg/uses.svg'),
+              //       Positioned.fill(
+              //         child: Row(
+              //           children: [
+              //             SizedBox(
+              //               width: 10.w,
+              //             ),
+              //             Text('Uses',
+              //                 style: GoogleFonts.roboto(
+              //                     fontSize: 8,
+              //                     color: AppColors.lightTextColor)),
+              //             const Expanded(child: SizedBox.shrink()),
+              //             Text(coupon.usesLeft.toString(),
+              //                 style: GoogleFonts.roboto(
+              //                     fontSize: 12,
+              //                     color: AppColors.lightTextColor)),
+              //             SizedBox(
+              //               width: 10.w,
+              //             ),
+              //           ],
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // ),
               SizedBox(
                 height: 15.h,
               ),
@@ -168,7 +168,7 @@ class CouponCard extends StatelessWidget {
                         child: Text(
                           'HIGHEST MILESTONE ACHIEVED',
                           style: GoogleFonts.roboto(
-                            fontSize: 7,
+                            fontSize: 10,
                             color: AppColors.lightTextColor,
                             fontWeight: FontWeight.w500,
                           ),
@@ -193,7 +193,7 @@ class CouponCard extends StatelessWidget {
                         child: Text('${coupon.highestConsecutiveDays} Days',
                             textAlign: TextAlign.center,
                             style: GoogleFonts.roboto(
-                                fontSize: 5, fontWeight: FontWeight.bold)),
+                                fontSize: 8, fontWeight: FontWeight.bold)),
                       ),
                     ],
                   )),

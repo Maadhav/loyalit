@@ -24,7 +24,11 @@ const CLIENT_ID =
   "54368817104-7a1123u3gcre2vmkvmihhv0kvao69u7k.apps.googleusercontent.com";
 const REDIRECT_URI = "https://loyalit.onrender.com/auth/google/callback";
 
-const client = new OAuth2Client(CLIENT_ID, process.env.CLIENT_SECRET, REDIRECT_URI);
+const client = new OAuth2Client(
+  CLIENT_ID,
+  process.env.CLOUD_CLIENT_SECRET,
+  REDIRECT_URI
+);
 
 app.get("/", (req, res) => {
   res.send("Hello, World!");
@@ -132,7 +136,11 @@ app.post("/transferNFT", async (req, res) => {
 
 // a Funcction which retrieves the user's fitness data
 async function getFitnessData(refreshToken) {
-  const client = new OAuth2Client(CLIENT_ID, process.env.CLIENT_SECRET, REDIRECT_URI);
+  const client = new OAuth2Client(
+    CLIENT_ID,
+    process.env.CLIENT_SECRET,
+    REDIRECT_URI
+  );
 
   client.setCredentials({ refresh_token: refreshToken });
   // Set the timezone to the user's timezone

@@ -45,7 +45,7 @@ class _HomeViewState extends State<HomeView> {
                           padding: EdgeInsets.symmetric(
                               horizontal: 10.w, vertical: 7.h),
                           decoration: BoxDecoration(
-                            boxShadow:const [
+                            boxShadow: const [
                               BoxShadow(
                                 color: AppColors.primary,
                                 blurRadius: 2,
@@ -142,8 +142,9 @@ class _HomeViewState extends State<HomeView> {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 9.w),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    SvgPicture.asset('assets/svg/back_button.svg'),
+                    // SvgPicture.asset('assets/svg/back_button.svg'),
                     SizedBox(
                       width: 10.w,
                     ),
@@ -163,7 +164,7 @@ class _HomeViewState extends State<HomeView> {
                     SizedBox(
                       width: 10.w,
                     ),
-                    SvgPicture.asset('assets/svg/forward_button.svg'),
+                    // SvgPicture.asset('assets/svg/forward_button.svg'),
                   ],
                 ),
               )

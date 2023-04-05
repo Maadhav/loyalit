@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:babylonjs_viewer/babylonjs_viewer.dart';
 import 'package:loyalit/core/model/coupon.dart';
 import 'package:loyalit/core/viewmodel/base_view_model.dart';
 import 'package:loyalit/core/viewmodel/nft_detail_view_model.dart';
@@ -114,10 +114,6 @@ class _NFTDetailViewState extends State<NFTDetailView> {
                       height: 260.h,
                       decoration: BoxDecoration(
                           color: Colors.black,
-                          image: const DecorationImage(
-                              image: AssetImage('assets/png/3d_shoe.png'),
-                              fit: BoxFit.fitHeight,
-                              alignment: Alignment.center),
                           border: Border.symmetric(
                               horizontal: BorderSide(
                             color: AppColors.primary,
@@ -125,16 +121,8 @@ class _NFTDetailViewState extends State<NFTDetailView> {
                           ))),
                       padding: EdgeInsets.symmetric(horizontal: 64.w),
                       alignment: Alignment.center,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          SvgPicture.asset(
-                            'assets/svg/rotate_left.svg',
-                          ),
-                          SvgPicture.asset(
-                            'assets/svg/rotate_right.svg',
-                          ),
-                        ],
+                      child: BabylonJSViewer(
+                        src: 'assets/glb/shoes.glb',
                       ),
                     ),
                     const SizedBox(
