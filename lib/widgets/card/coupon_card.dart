@@ -47,12 +47,12 @@ class CouponCard extends StatelessWidget {
                 coupon.name,
                 style: GoogleFonts.originalSurfer(
                   color: AppColors.lightTextColor,
-                  fontSize: 16.sp,
+                  fontSize: 16,
                 ),
               ),
               Text(coupon.description,
                   style: GoogleFonts.originalSurfer(
-                      color: AppColors.lightTextColor, fontSize: 10.sp)),
+                      color: AppColors.lightTextColor, fontSize: 10)),
               SizedBox(
                 height: 7.h,
               ),
@@ -62,7 +62,7 @@ class CouponCard extends StatelessWidget {
                 child: Text('${coupon.discount}% DISCOUNT',
                     textAlign: TextAlign.center,
                     style: GoogleFonts.roboto(
-                        fontSize: 7.sp, fontWeight: FontWeight.bold)),
+                        fontSize: 7, fontWeight: FontWeight.bold)),
               ),
               SizedBox(
                 height: 15.h,
@@ -79,7 +79,7 @@ class CouponCard extends StatelessWidget {
                         child: Text(
                           'CURRENT MILESTONE',
                           style: GoogleFonts.roboto(
-                            fontSize: 7.sp,
+                            fontSize: 7,
                             color: AppColors.lightTextColor,
                             fontWeight: FontWeight.w500,
                           ),
@@ -90,7 +90,7 @@ class CouponCard extends StatelessWidget {
                       ),
                       Text(coupon.currentMilestone.toString(),
                           style: GoogleFonts.roboto(
-                              fontSize: 8.sp, color: AppColors.lightTextColor)),
+                              fontSize: 8, color: AppColors.lightTextColor)),
                       SizedBox(
                         width: 4.w,
                       ),
@@ -103,7 +103,7 @@ class CouponCard extends StatelessWidget {
                         child: Text('${coupon.consecutiveDays} Days',
                             textAlign: TextAlign.center,
                             style: GoogleFonts.roboto(
-                                fontSize: 5.sp, fontWeight: FontWeight.bold)),
+                                fontSize: 5, fontWeight: FontWeight.bold)),
                       ),
                     ],
                   )),
@@ -114,7 +114,7 @@ class CouponCard extends StatelessWidget {
                 '${coupon.daysUntilNextMilestone} Days Until Next Milestone',
                 style: GoogleFonts.roboto(
                   color: AppColors.lightTextColor,
-                  fontSize: 8.sp,
+                  fontSize: 8,
                   fontWeight: FontWeight.w500,
                   fontStyle: FontStyle.italic,
                 ),
@@ -137,12 +137,12 @@ class CouponCard extends StatelessWidget {
                           ),
                           Text('Uses',
                               style: GoogleFonts.roboto(
-                                  fontSize: 8.sp,
+                                  fontSize: 8,
                                   color: AppColors.lightTextColor)),
                           const Expanded(child: SizedBox.shrink()),
                           Text(coupon.usesLeft.toString(),
                               style: GoogleFonts.roboto(
-                                  fontSize: 12.sp,
+                                  fontSize: 12,
                                   color: AppColors.lightTextColor)),
                           SizedBox(
                             width: 10.w,
@@ -168,7 +168,7 @@ class CouponCard extends StatelessWidget {
                         child: Text(
                           'HIGHEST MILESTONE ACHIEVED',
                           style: GoogleFonts.roboto(
-                            fontSize: 7.sp,
+                            fontSize: 7,
                             color: AppColors.lightTextColor,
                             fontWeight: FontWeight.w500,
                           ),
@@ -180,7 +180,7 @@ class CouponCard extends StatelessWidget {
                       ),
                       Text(coupon.heightestMilestone.toString(),
                           style: GoogleFonts.roboto(
-                              fontSize: 8.sp, color: AppColors.lightTextColor)),
+                              fontSize: 8, color: AppColors.lightTextColor)),
                       SizedBox(
                         width: 4.w,
                       ),
@@ -193,7 +193,7 @@ class CouponCard extends StatelessWidget {
                         child: Text('${coupon.highestConsecutiveDays} Days',
                             textAlign: TextAlign.center,
                             style: GoogleFonts.roboto(
-                                fontSize: 5.sp, fontWeight: FontWeight.bold)),
+                                fontSize: 5, fontWeight: FontWeight.bold)),
                       ),
                     ],
                   )),

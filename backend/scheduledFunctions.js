@@ -43,7 +43,7 @@ exports.initScheduledJobs = (getFitnessData) => {
             : 0,
           daysUntilNextMilestone: daysUntilNextMilestone,
           highestConsecutiveDays:
-            consecutiveDays + 1 > user.hieghestConsecutiveDays
+            consecutiveDays + 1 > (user.hieghestConsecutiveDays || 0)
               ? consecutiveDays + 1
               : user.hieghestConsecutiveDays || 0,
         });
