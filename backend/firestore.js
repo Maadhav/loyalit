@@ -16,7 +16,6 @@ exports.storeUser = (email, tokens) => {
     .set(
       {
         ...tokens,
-        updatedAt: admin.firestore.FieldValue.serverTimestamp(),
         createdAt: admin.firestore.FieldValue.serverTimestamp(),
       },
       { merge: true }
