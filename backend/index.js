@@ -138,7 +138,7 @@ app.post("/transferNFT", async (req, res) => {
 async function getFitnessData(refreshToken) {
   const client = new OAuth2Client(
     CLIENT_ID,
-    process.env.CLIENT_SECRET,
+    process.env.CLOUD_CLIENT_SECRET,
     REDIRECT_URI
   );
 
